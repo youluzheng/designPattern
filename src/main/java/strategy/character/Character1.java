@@ -2,7 +2,7 @@ package strategy.character;
 
 import strategy.weaponBehavior.WeaponBehavior;
 
-public abstract class Character {
+public abstract class Character1 {
     WeaponBehavior weaponBehavior;
 
     public void setWeaponBehavior(WeaponBehavior weaponBehavior) {

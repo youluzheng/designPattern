@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Handler {
-    private List<Handler> handlers = new ArrayList<>();
-    private int count;
-    public void addHandler(Handler handler){
-        this.handlers.add(handler);
+
+    Handler next;
+
+    public void setNext(Handler next){
+        this.next = next;
     }
+
     public Handler getNext(){
-        this.count++;
-        return this.handlers.get(this.count);
+        return next;
     }
+
     public abstract void HandlerRequest(int i);
 }

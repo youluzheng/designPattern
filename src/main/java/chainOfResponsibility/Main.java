@@ -2,9 +2,10 @@ package chainOfResponsibility;
 
 public class Main {
     public static void main(String[] args) {
-        Handler firstHander = new Hander1();
-        firstHander.addHandler(new Hander2());
-        firstHander.addHandler(new LastHander());
-        firstHander.HandlerRequest(10);
+        Handler hander1 = new Hander1();
+        Handler handler2 = new Hander2();
+        hander1.setNext(new Hander2());
+        handler2.setNext(new LastHander());
+        hander1.HandlerRequest(5);
     }
 }
